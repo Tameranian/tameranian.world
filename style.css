@@ -184,14 +184,17 @@ a:visited {
  
  a:hover {
   text-decoration: none;
+  rgba(253, 212, 0, 1);
 }
 
 a:active {
   text-decoration: none;
+  rgba(253, 212, 0, 1);
 }
 
 a:link {
   text-decoration: none;
+  rgba(253, 212, 0, 1);
 }
 
 .spinner-wrapper{
