@@ -182,7 +182,7 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .link-banner li {
      font-size: 20px;
   }
