@@ -168,12 +168,8 @@ body {
   margin: 0;
   transform: translate(-50%, -50%);
   display: flex;
-  font-size: 2vw;
   height: 60px;
   width:100%;
-  list-style-type: none;
-  font-family: 'genesys', sans-serif;
-  text-align: center;
 }
 
 .link-banner li {
@@ -185,6 +181,13 @@ body {
   font-family: 'Genesys', sans-serif;
   text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+  .link-banner li {
+     font-size: 20px;
+  }
+}
+
 
 a:visited { 
   text-decoration: none; 
