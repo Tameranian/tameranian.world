@@ -24,8 +24,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: 'coolvetica-rg-it', sans-serif;
   margin: 0;
   padding: 0;
@@ -40,6 +38,11 @@ body {
   position: relative;
   margin: 100px 0;
   z-index: 10;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 22.5em
 }
 
 .img-container {
@@ -54,6 +57,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  
 }
 
 
@@ -62,6 +66,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
+  
 }
 
 .action-btn {
@@ -123,6 +128,7 @@ body {
   width: 0%;
   transition: width 0.1s linear;
   z-index: -10;
+  
 
 }
 
@@ -164,17 +170,19 @@ body {
   display: flex;
   font-size: x-large;
   height: 60px;
-  width: 1920px;
+  width:100%;
   list-style-type: none;
   font-family: 'genesys', sans-serif;
+  text-align: center;
 }
 
 .link-banner li {
   display: inline-block;
-  margin: 8px 40px 0 0;
+  margin: auto auto auto auto;
   color: rgba(253, 212, 0, 1);
   text-decoration:none;
   font-family: 'Genesys', sans-serif;
+  text-align: center;
 }
 a:visited { 
   text-decoration: none; 
@@ -184,17 +192,17 @@ a:visited {
  
  a:hover {
   text-decoration: none;
-  rgba(253, 212, 0, 1);
+  color: rgba(253, 212, 0, 1); 
 }
 
 a:active {
   text-decoration: none;
-  rgba(253, 212, 0, 1);
+  color: rgba(253, 212, 0, 1); 
 }
 
 a:link {
   text-decoration: none;
-  rgba(253, 212, 0, 1);
+  color: rgba(253, 212, 0, 1); 
 }
 
 .spinner-wrapper{
