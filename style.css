@@ -14,6 +14,10 @@
 	src: url('fonts/Genesys.otf') format('opentype');
 }
 
+@font-face {
+	font-family: 'Y2K_neophyte_italic';
+	src: url('fonts/Y2K_neophyte_italic.ttf') format('opentype');
+}
 body {
   
   background-image: linear-gradient(
@@ -40,7 +44,7 @@ body {
   z-index: 10;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
+  margin-top: -50vh;
   margin-bottom: auto;
   width: 22.5em
 }
@@ -158,56 +162,29 @@ body {
   transform: translate(0, -10px);
 }
 
-.link-banner ul {
-  background: black;
-  color: rgba(253, 212, 0, 1);
-  position: absolute;
-  top:3%;
-  left:50%;
-  padding: 13px;
-  margin: 0;
-  transform: translate(-50%, -50%);
-  display: flex;
-  height: 60px;
-  width:100%;
-}
-
-.link-banner li {
-  display: inline-block;
-  font-size: 2vw;
-  margin: auto auto auto auto;
-  color: rgba(253, 212, 0, 1);
-  text-decoration:none;
-  font-family: 'Genesys', sans-serif;
-  text-align: center;
-}
-
-@media screen and (max-width: 1200px) {
-  .link-banner li {
-     font-size: 10px;
-  }
-}
-
-
 a:visited { 
   text-decoration: none; 
-  color: rgba(253, 212, 0, 1); 
+  text-decoration-thickness: 20px;
+  color: rgb(0, 0, 0); 
   font-family: 'Genesys', sans-serif;
  }
  
  a:hover {
   text-decoration: none;
-  color: rgba(253, 212, 0, 1); 
+  text-decoration-thickness: 20px;
+  color: rgb(0, 0, 0); 
 }
 
 a:active {
   text-decoration: none;
-  color: rgba(253, 212, 0, 1); 
+  text-decoration-thickness: 20px;
+  color: rgb(0, 0, 0); 
 }
 
 a:link {
   text-decoration: none;
-  color: rgba(253, 212, 0, 1); 
+  text-decoration-thickness: 20px;
+  color: rgb(0, 0, 0); 
 }
 
 .spinner-wrapper{
@@ -259,3 +236,128 @@ a:link {
 
 }
 
+.logo
+{
+background: url() ;
+display: inline-block;
+margin: auto;
+width: 50%;
+right: 2%;
+padding: 100px;
+text-align: center;
+list-style-type: none;
+position: relative;
+display: block;
+}
+
+.logo ul{
+  list-style-type: none;
+}
+
+.graphic-vurbworld
+{
+background: url() ;
+display: inline-block;
+margin-left: auto; 
+margin-right: 7px;
+margin-top:-70px;
+margin-bottom: auto;
+width: 50%;
+padding: 100px;
+text-align: right;
+list-style-type: none;
+position: relative;
+display: block;
+}
+
+.graphic-vurbworld ul{
+  list-style-type: none;
+}
+
+
+hr.credit-line{
+  background: black;
+  width:100%;
+  text-align:center;
+  height: 5px;
+  border: none;
+  position:relative;
+  top:-9px;
+}
+
+.credit-footer ul {
+  background: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+  position: absolute;
+  bottom:0.5%;
+  left:50%;
+  padding: 13px;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: 65px;
+  width:100%;
+}
+
+.credit-footer li {
+  display: inline-block;
+  font-size: 2vw;
+  right: 40px;
+  margin: 0 6vh 0 0;
+  color: rgb(0, 0, 0);
+  text-decoration:underline;
+  text-decoration-thickness: 2vh;
+  font-family: 'Y2K_neophyte_italic', sans-serif;
+  
+}
+
+hr.banner-line{
+  background: black;
+  width:100%;;
+  top: 40px;
+  height: 5px;
+  border: none;
+  margin-bottom: 40px;
+  position:relative;
+  top:80px;
+}
+
+.link-banner ul {
+  background: rgba(0, 0, 0, 0);
+  color: rgba(253, 212, 0, 1);
+  position: absolute;
+  top:4%;
+  left:50%;
+  padding: 13px;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: 60px;
+  width:100%;
+}
+
+.link-banner li {
+  display: inline-block;
+  font-size: 2vw;
+  margin: 0 6vh 0 14vh;
+  color: rgb(0, 0, 0);
+  text-decoration:underline;
+  text-decoration-thickness: 2vh;
+  font-family: 'Y2K_neophyte_italic', sans-serif;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .link-banner li {
+     font-size: 10px;
+  }
+}
+
+.model{
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: 1200px;
+  border: 0;
+}
