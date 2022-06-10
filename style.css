@@ -4,20 +4,37 @@
   box-sizing: border-box;
 }
 
+
+@font-face {
+	font-family: 'Helvetica_NeueLTW0693BlkExtObl';
+	src: url('fonts/Helvetica_NeueLTW0693BlkExtObl.ttf');
+}
+
+@font-face {
+  font-family: 'Helvetica_Neue_Medium_Extended';
+	src: url('fonts/Helvetica_Neue_Medium_Extended.ttf'); 
+}
+
+@font-face {
+	font-family: 'coolvetica-rg';
+	src: url('fonts/coolvetica-rg.otf');
+}
+
 @font-face {
   font-family: 'coolvetica-rg-it';
-	src: url('fonts/coolvetica-rg-it.otf') format('opentype'); 
+	src: url('fonts/coolvetica-rg-it.otf'); 
 }
 
 @font-face {
 	font-family: 'Genesys';
-	src: url('fonts/Genesys.otf') format('opentype');
+	src: url('fonts/Genesys.otf');
 }
 
 @font-face {
-	font-family: 'Y2K_neophyte_italic';
-	src: url('fonts/Y2K_neophyte_italic.ttf') format('opentype');
+	font-family: 'Y2K_neophyte';
+	src: url('fonts/Y2K_neophyte.ttf');
 }
+
 body {
   
   background-image: linear-gradient(
@@ -236,39 +253,72 @@ a:link {
 
 }
 
-.logo
+/* .logo
 {
-background: url() ;
-display: inline-block;
-margin: auto;
-width: 50%;
-right: 2%;
-padding: 100px;
-text-align: center;
-list-style-type: none;
-position: relative;
-display: block;
-}
+  background-image: url("images/vurbworldOK.png");
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: -9999999px;
+  top: 100vh;
+} */
+
 
 .logo ul{
   list-style-type: none;
+
 }
+
+.logo li{
+  font-size: 10vh;
+  text-align: justify;
+  word-spacing: -40vh;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+  text-decoration-thickness: 2vh;
+}
+
+
+@media screen and (max-width: 1600px) {
+  .logo li {
+     font-size: 7vh;
+     text-decoration-thickness: 1.5vh;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .logo li {
+     font-size: 4vh;
+     text-decoration-thickness: 1.1vh;
+  }
+}
+
+/* 
+@media screen and (max-width: 800px) {
+  .logo li {
+     font-size: 2vh;
+     text-decoration-thickness: .5vh;
+  }
+} */
 
 .graphic-vurbworld
 {
-background: url() ;
-display: inline-block;
-margin-left: auto; 
-margin-right: 7px;
-margin-top:-70px;
-margin-bottom: auto;
-width: 50%;
-padding: 100px;
-text-align: right;
-list-style-type: none;
-position: relative;
-display: block;
+  background: url() ;
+  display: block;
+  margin-left: auto; 
+  margin-top:5vh;
+  margin-bottom: auto;
+  text-align: right;
+  max-width: 100%;
+  max-height: 100vh;
+  height: auto;
 }
+
 
 .graphic-vurbworld ul{
   list-style-type: none;
@@ -279,10 +329,10 @@ hr.credit-line{
   background: black;
   width:100%;
   text-align:center;
-  height: 5px;
+  height: 1vh;
   border: none;
-  position:relative;
-  top:-9px;
+  position:absolute;
+  top:97.5vh;
 }
 
 .credit-footer ul {
@@ -297,29 +347,35 @@ hr.credit-line{
   display: flex;
   height: 65px;
   width:100%;
+
+  text-align:center;
+  height: 10px;
+  top:92vh;
+  
 }
 
 .credit-footer li {
+  background: black;
+  width:100%;
+  text-align:center;
+  height: 0px;
+  top:8vh;
   display: inline-block;
   font-size: 2vw;
-  right: 40px;
-  margin: 0 6vh 0 0;
   color: rgb(0, 0, 0);
   text-decoration:underline;
   text-decoration-thickness: 2vh;
   font-family: 'Y2K_neophyte_italic', sans-serif;
-  
 }
 
 hr.banner-line{
   background: black;
-  width:100%;;
-  top: 40px;
+  width:100%;
   height: 5px;
   border: none;
   margin-bottom: 40px;
   position:relative;
-  top:80px;
+  top:113px;
 }
 
 .link-banner ul {
