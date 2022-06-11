@@ -7,7 +7,7 @@
 
 @font-face {
 	font-family: 'Helvetica_NeueLTW0693BlkExtObl';
-	src: url('fonts/Helvetica_NeueLTW0693BlkExtObl.ttf');
+	src: url('fonts/Helvetica_NeueLTW0693BlkExtObl.ttf'); 
 }
 
 @font-face {
@@ -35,6 +35,11 @@
 	src: url('fonts/Y2K_neophyte.ttf');
 }
 
+@font-face {
+	font-family: 'Y2K_neophyte_italic';
+	src: url('fonts/Y2K_neophyte_italic.ttf');
+}
+
 body {
   
   background-image: linear-gradient(
@@ -56,14 +61,19 @@ body {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.6);
   display: flex;
   padding: 20px 30px;
-  position: relative;
+  position: absolute;
   margin: 100px 0;
   z-index: 10;
   margin-left: auto;
   margin-right: auto;
   margin-top: -50vh;
   margin-bottom: auto;
-  width: 22.5em
+  
+  width: 80%;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .img-container {
@@ -183,25 +193,28 @@ a:visited {
   text-decoration: none; 
   text-decoration-thickness: 20px;
   color: rgb(0, 0, 0); 
-  font-family: 'Genesys', sans-serif;
+  font-family: 'Y2K_neophyte_italic', sans-serif;
  }
  
  a:hover {
   text-decoration: none;
   text-decoration-thickness: 20px;
   color: rgb(0, 0, 0); 
+  font-family: 'Y2K_neophyte_italic', sans-serif;
 }
 
 a:active {
   text-decoration: none;
   text-decoration-thickness: 20px;
   color: rgb(0, 0, 0); 
+  font-family: 'Y2K_neophyte_italic', sans-serif;
 }
 
 a:link {
   text-decoration: none;
   text-decoration-thickness: 20px;
   color: rgb(0, 0, 0); 
+  font-family: 'Y2K_neophyte_italic', sans-serif;
 }
 
 .spinner-wrapper{
@@ -279,22 +292,23 @@ a:link {
   margin: 0;
   position: absolute;
   transform: translate(-50%, -50%);
-  text-decoration: underline;
-  text-decoration-thickness: 1.5vh;
 }
 
+#main-img {
+  
+  height: 250px;
+  width:100%;
+} 
 
 @media screen and (max-width: 1600px) {
-  .logo li {
-     font-size: 4vh;
-     text-decoration-thickness: 1.3vh;
+  #main-img{      
+    content: url("img/vurbworldOK.png");
   }
 }
 
 @media screen and (max-width: 1100px) {
   .logo li {
-     font-size: 3vh;
-     text-decoration-thickness: 1vh;
+    content: url("img/vurbworldOK.png");
   }
 }
 
@@ -306,7 +320,7 @@ a:link {
   }
 } */
 
-.graphic-vurbworld
+/* .graphic-vurbworld
 {
   background: url() ;
   display: block;
@@ -317,12 +331,30 @@ a:link {
   max-width: 100%;
   max-height: 100vh;
   height: auto;
-}
+} */
 
 
 .graphic-vurbworld ul{
   list-style-type: none;
 }
+
+.graphic-vurbworld li{
+  font-size: 5vh;
+  position: absolute;
+  top: 10vh;
+  right: 0px;
+  display: block;
+  margin-left: auto;
+}
+@media screen and (max-width: 1520px) {
+  #myimage {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+  }
+}
+
 
 
 hr.credit-line{
@@ -375,7 +407,7 @@ hr.banner-line{
   border: none;
   margin-bottom: 40px;
   position:relative;
-  top:113px;
+  top:11px;
 }
 
 .link-banner ul {
