@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Artist Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header {
+            animation: glitch 1s linear infinite;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            color: #00FF00;
+            font-size: 50px;
+            margin-left: 20px;
+            text-shadow: 0px 0px 5px #00FF00;
+            animation: neon 1s ease-in-out infinite alternate;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-basis: 70%;
+            margin-right: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: neon 1s ease-in-out infinite alternate;
+        }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                position: relative;
+            }
+
+                nav a:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -5px;
+                    height: 2px;
+                    background-color: #fff;
+                    transform: scaleX(0);
+                    transition: transform 0.3s ease;
+                    transform-origin: left;
+                }
+
+                nav a:hover:before {
+                    transform: scaleX(1);
+                    transform-origin: right;
+                }
+
+        .hero {
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .hero img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                border: 10px solid #00FF00;
+                box-shadow: 0px 0px 20px #00FF00;
+                animation: neon 1s ease-in-out infinite alternate;
+            }
+
+            .hero h2 {
+                color: #00FF00;
+                font-size: 40px;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                animation: neon 1s ease-in-out infinite alternate;
+            }
+
+            .hero p {
+                font-size: 20px;
+                line-height: 1.5;
+                margin-bottom: 40px;
+                animation: neon 1s ease-in-out infinite alternate;
+            }
+
+        .animation1 {
+            position: absolute top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC0CB;
+            opacity: 0.4;
+            animation: move1 4s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+
+        .animation2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ADD8E6;
+            opacity: 0.4;
+            animation: move2 6s ease-in-out infinite alternate;
+            z-index: -2;
+        }
+
+        .animation3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F0E68C;
+            opacity: 0.4;
+            animation: move3 8s ease-in-out infinite alternate;
+            z-index: -3;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 0 0 20px #00FF00;
+            }
+
+            20% {
+                text-shadow: 0 0 20px #00FF00, -2px -2px 2px #00FF00, 2px 2px 2px #00FF00;
+            }
+
+            40% {
+                text-shadow: 0 0 20px #00FF00, -4px -4px 4px #00FF00, 4px 4px 4px #00FF00;
+            }
+
+            60% {
+                text-shadow: 0 0 20px #00FF00, -6px -6px 6px #00FF00, 6px 6px 6px #00FF00;
+            }
+
+            80% {
+                text-shadow: 0 0 20px #00FF00, -8px -8px 8px #00FF00, 8px 8px 8px #00FF00;
+            }
+
+            100% {
+                text-shadow: 0 0 20px #00FF00, -10px -10px 10px #00FF00, 10px 10px 10px #00FF00;
+            }
+        }
+
+        @keyframes neon {
+            from {
+                text-shadow: 0px 0px 10px #00FF00;
+            }
+
+            to {
+                text-shadow: 0px 0px 20px #00FF00;
+            }
+        }
+
+        @keyframes move1 {
+            from {
+                transform: translate(-100%, -100%);
+            }
+
+            to {
+                transform: translate(100%, 100%);
+            }
+        }
+
+        @keyframes move2 {
+            from {
+                transform: translate(100%, -100%);
+            }
+
+            to {
+                transform: translate(-100%, 100%);
+            }
+        }
+
+        @keyframes move3 {
+            from {
+                transform: translate(-100%, 100%);
+            }
+
+            to {
+                transform: translate(100%, -100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">3D ARTIST</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">
+                    Portfolio</
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <h2 class="title">Welcome to my 3D art portfolio!</h2>
+            <p class="subtitle">Explore my works below and let me know what you think!</p>
+            <div class="gallery">
+                <div class="item">
+                    <img src="https://i.postimg.cc/0NS3q92W/art1.png" alt="Art 1">
+                </div>
+                <div class="item">
+                    <img src="https://i.postimg.cc/hjFkYBdG/art2.png" alt="Art 2">
+                </div>
+                <div class="item">
+                    <img src="https://i.postimg.cc/3N9tSV5k/art3.png" alt="Art 3">
+                </div>
+                <div class="item">
+                    <img src="https://i.postimg.cc/vm4N0Fy1/art4.png" alt="Art 4">
+                </div>
+                <div class="item">
+                    <img src="https://i.postimg.cc/5yJL44MH/art5.png" alt="Art 5">
+                </div>
+                <div class="item">
+                    <img src="https://i.postimg.cc/cJsJjK1r/art6.png" alt="Art 6">
+                </div>
+            </div>
+            <a href="#" class="btn">View More</a>
+        </main>
+    </div>
+    <div class="animation1"></div>
+    <div class="animation2"></div>
+    <div class="animation3"></div>
+    <script>
+// Add class 'active' to current page link
+var currentLocation = location.href;
+var links = document.querySelectorAll('nav a');
+for (var i = 0; i < links.length; i++) {
+if (links[i].href === currentLocation) {
+links[i].classList.add('active');
+}
+}
+    </script>
+
+</body>
+</html>

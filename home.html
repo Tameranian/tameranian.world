@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tameranian.world</title>
+    <style>
+
+        @font-face {
+            font-family: 'DarumadropOne-Regular';
+            src: url('fonts/DarumadropOne-Regular.ttf');
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+            .hero::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 150%;
+                background-image: url('images/chomp_chomp.png');
+                background-size: cover;
+                opacity: 0.5;
+                z-index: -1;
+                animation: floating 3s ease-in-out infinite alternate;
+            }
+
+            .hero img {
+                max-width: 20%;
+                height: auto;
+                border-radius: 10px;
+                -webkit-filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.5));
+                transition: transform 0.5s;
+            }
+
+        @keyframes floating {
+            from {
+                transform: translateY(-10px);
+            }
+
+            to {
+                transform: translateY(10px);
+            }
+        }
+
+        .twitter-timeline {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10vh;
+        }
+
+        .featured {
+            flex-basis: 100%;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+            .featured h2 {
+                font-size: 32px;
+                font-weight: bold; /*
+                text-transform: uppercase;*/
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+                font-family: 'DarumadropOne-Regular';
+                color: white;
+            }
+
+            .featured p {
+                font-size: 20px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+                font-family: 'DarumadropOne-Regular';
+                color: white;
+            }
+
+            .featured img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 4px 4px 0 #000000;
+                transition: transform 0.5s;
+            }
+
+                .featured img:hover {
+                    transform: scale(1.1);
+                }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <link rel="stylesheet" href="awesome.css">
+        <header class="header">
+            <h1 class="logo">tameranian.world</h1>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="bwa.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="commissions.html">Commissions</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <img src="images/kaboom.gif" alt="3D Artwork">
+            <div class="featured">
+                <h2>welcome to my website</h2>
+                <p>Check out my latest tweet!</p>
+            </div>
+        </section>
+        <a class="twitter-timeline" data-width="400" data-height="400" data-theme="dark" href="https://twitter.com/Tameranian3d?ref_src=twsrc%5Etfw">Tweets by Tameranian3d</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <footer class="footer">
+            <div class="social-menu">
+                <ul>
+                    <li><a href="https://www.youtube.com/c/VURBANK/videos"><img src="images/youtube.png" width="40" height="40"></a></li>
+                    <li><a href="https://tameranian3d.newgrounds.com/"><img src="images/newgrounds.png" width="40" height="40"></a></li>
+                    <li><a href="https://twitter.com/Tameranian3d"><img src="images/twitter.png" width="40" height="40"></a></li>
+                    <li><a href="https://www.instagram.com/tameranian3d/"><img src="images/instagram.png" width="40" height="40"></a></li>
+                    <li><a href="https://discord.gg/fJewAHg2SC"><img src="images/discord.png" width="40" height="40"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

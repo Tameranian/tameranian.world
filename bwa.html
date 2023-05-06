@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>tameranian.world</title>
+    <style>
+
+        @font-face {
+            font-family: 'DarumadropOne-Regular';
+            src: url('fonts/DarumadropOne-Regular.ttf');
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #gallery {
+            margin: 50px auto;
+            text-align: center;
+            font-family: 'DarumadropOne-Regular';
+            color: white;
+            font-size: large;
+            animation: floating 3s ease-in-out infinite alternate;
+        }
+
+
+        @keyframes floating {
+            from {
+                transform: rotate(2deg);
+            }
+
+            to {
+                transform: rotate(-2deg);
+            }
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+        .gallery-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+
+        }
+
+        .gallery-item {
+            margin: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            background-color: rgb(0, 0, 0, .5);
+            border-radius: 25px;
+        }
+
+            .gallery-item:hover {
+                transform: scale(1.1);
+            }
+
+            .gallery-item:active {
+                transform: scale(0.9);
+            }
+
+        .gallery-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.5));
+        }
+
+        .modal-container {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.5));
+        }
+
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(0, 0, 0, .5);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 80%;
+            max-height: 80%;
+            cursor: zoom-in;
+        }
+
+            .modal img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+
+            }
+
+            .modal.active {
+                cursor: zoom-out;
+            }
+
+                .modal.active .close {
+                    display: block;
+                }
+
+            .modal .close {
+                display: none;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">tameranian.world</h1>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="bwa.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="commissions.html">Commissions</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <link rel="stylesheet" href="awesome.css">
+            <div class="gallery-container">
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="images/art/POOPPPP.png" alt="Artwork 1" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/6weyzs.png" alt="Artwork 2" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/ezgif.com-gif-maker (1).gif" alt="Artwork 3" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/sdfgsfg.png" alt="Artwork 3" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/chomp chomping2.png" alt="Artwork 3" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="images/art/adssad-removebg-preview.png" alt="Artwork 4" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/0000_2.gif" alt="Artwork 5" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/0000.gif" alt="Artwork 6" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/FnjORGGaAAAZRdf.png" alt="Artwork 6" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/FnjOPaqaUAAa_70.png" alt="Artwork 6" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="images/art/asdAWDSASD.png" alt="Artwork 1" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/tgucb.png" alt="Artwork 2" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/Screenshot 2023-04-15 224121.png" alt="Artwork 3" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/0001_1.gif" alt="Artwork 3" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/bwabwa.gif" alt="Artwork 3" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="images/art/vrc2.gif" alt="Artwork 4" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/ezgif.com-video-to-gif (1).gif" alt="Artwork 5" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/vrc3.gif" alt="Artwork 6" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/Screenshot_20230402_151249_Gallery.jpg" alt="Artwork 6" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/3d model of my friend @RABIDGHOUL's sona!.gif" alt="Artwork 6" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="images/art/Fk2k3HpaEAIbFd2.jpg" alt="Artwork 1" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/FnMrWbMaEAAxZ9C.jpg" alt="Artwork 2" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/FnMrU2YaAAMcUaP.jpg" alt="Artwork 3" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/FmUUwskaMAAce-M.jpg" alt="Artwork 3" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/Illustration4.png" alt="Artwork 3" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="images/art/FezrEAhVIAA0Y_E.png" alt="Artwork 4" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/etb 6hyu.png" alt="Artwork 5" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/FRoK4W-UcAAup3B.jpg" alt="Artwork 6" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/ASD.png" alt="Artwork 6" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/iu_445824_8725764.png" alt="Artwork 6" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="images/art/Screenshot 2022-12-21 002459.png" alt="Artwork 1" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/ASsaD.png" alt="Artwork 2" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/Screenshot 2022-12-06 200249.png" alt="Artwork 3" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/Fi12JXYVQAEebsV.jpg" alt="Artwork 3" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/smg.png" alt="Artwork 3" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="images/art/pistol.png" alt="Artwork 4" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art/FVy_3d3VsAIqt_E (1).png" alt="Artwork 5" class="gallery-img">
+                    </div>
+
+                </div>
+            </div>
+            <div class="gallery-pages">
+                <button class="gallery-page-btn" id="prev-page"><</button>
+                <button class="gallery-page-btn" id="next-page">></button>
+            </div>
+        </section>
+    </div>
+        <footer class="footer">
+            <div class="social-menu">
+                <ul>
+                    <!--
+                                    <p>Created by <a href="#">Tameranian</a>.</p>-->
+                    <li><a href="https://www.youtube.com/c/VURBANK/videos"><img src="images/youtube.png" width="40" height="40"></a></li>
+                    <li><a href="https://tameranian3d.newgrounds.com/"><img src="images/newgrounds.png" width="40" height="40"></a></li>
+                    <li><a href="https://twitter.com/Tameranian3d"><img src="images/twitter.png" width="40" height="40"></a></li>
+                    <li><a href="https://www.instagram.com/tameranian3d/"><img src="images/instagram.png" width="40" height="40"></a></li>
+                    <li><a href="https://discord.gg/fJewAHg2SC"><img src="images/discord.png" width="40" height="40"></a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <div class="modal-container">
+            <div class="modal">
+                <img src="" class="modal-img">
+                <div class="close">&times;</div>
+            </div>
+        </div>
+</body>
+</html>
+
+<script>
+    const gallery = document.querySelector(".gallery-container");
+    const modal = document.querySelector(".modal-container");
+    const modalImg = document.querySelector(".modal-img");
+    const closeBtn = document.querySelector(".close");
+
+    let isDragging = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+    let scale = 1;
+    let prevScale = 1;
+
+    gallery.addEventListener("click", (event) => {
+        if (event.target.classList.contains("gallery-img")) {
+            const src = event.target.getAttribute("src");
+            modalImg.setAttribute("src", src);
+            modal.style.display = "block";
+        }
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    modal.addEventListener("mousedown", dragStart);
+    modal.addEventListener("mouseup", dragEnd);
+    modal.addEventListener("mousemove", drag);
+
+    modal.addEventListener("wheel", zoom);
+
+    function dragStart(event) {
+        if (event.type === "touchstart") {
+            initialX = event.touches[0].clientX - xOffset;
+            initialY = event.touches[0].clientY - yOffset;
+        } else {
+            initialX = event.clientX - xOffset;
+            initialY = event.clientY - yOffset;
+        }
+
+        if (event.target === modalImg) {
+            isDragging = true;
+        }
+    }
+
+    function dragEnd(event) {
+        initialX = currentX;
+        initialY = currentY;
+
+        isDragging = false;
+    }
+
+    function drag(event) {
+        if (isDragging) {
+            event.preventDefault();
+
+            if (event.type === "touchmove") {
+                currentX = event.touches[0].clientX - initialX;
+                currentY = event.touches[0].clientY - initialY;
+            } else {
+                currentX = event.clientX - initialX;
+                currentY = event.clientY - initialY;
+            }
+
+            xOffset = currentX;
+            yOffset = currentY;
+
+            setTransform();
+        }
+    }
+
+    function zoom(e) {
+        let img = document.querySelector(".modal-img");
+        let scaleFactor = 1.1;
+        let delta = e.deltaY;
+        let rect = img.getBoundingClientRect();
+        let mouseX = e.clientX - rect.left;
+        let mouseY = e.clientY - rect.top;
+        let oldWidth = rect.width;
+        let oldHeight = rect.height;
+
+        if (delta < 0) {
+            img.style.width = oldWidth * scaleFactor + "px";
+            img.style.height = oldHeight * scaleFactor + "px";
+        } else {
+            img.style.width = oldWidth / scaleFactor + "px";
+            img.style.height = oldHeight / scaleFactor + "px";
+        }
+
+        let newRect = img.getBoundingClientRect();
+        let newX = (mouseX / oldWidth) * newRect.width;
+        let newY = (mouseY / oldHeight) * newRect.height;
+        let dx = newX - mouseX;
+        let dy = newY - mouseY;
+        let newLeft = newRect.left - dx;
+        let newTop = newRect.top - dy;
+
+        img.style.left = newLeft + "px";
+        img.style.top = newTop + "px";
+    }
+
+    function setTransform() {
+        modalImg.style.transform = `scale(${scale}) translate(${xOffset}px, ${yOffset}px)`;
+    }
+
+    function closeModal() {
+        const modal = document.querySelector(".modal-container");
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+        modal.removeEventListener("wheel", zoomInOut);
+        modal.removeEventListener("mousedown", startPan);
+        modal.removeEventListener("mouseup", stopPan);
+        modal.removeEventListener("mousemove", pan);
+        modal.removeEventListener("click", closeModal);
+    }
+
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    // Initialize the current page
+    let currentPage = 0;
+
+    // Add event listeners to the buttons to cycle through pages
+    const prevBtn = document.getElementById('prev-page');
+    prevBtn.addEventListener('click', () => {
+        if (currentPage > 0) {
+            currentPage--;
+            updateGallery();
+        }
+    });
+
+    const nextBtn = document.getElementById('next-page');
+    nextBtn.addEventListener('click', () => {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const numPages = Math.ceil(galleryItems.length / itemsPerPage);
+        if (currentPage < numPages - 1) {
+            currentPage++;
+            updateGallery();
+        }
+    });
+
+    // Calculate the starting and ending indexes for the current page
+    const itemsPerPage = 10; // Change this to adjust the number of items per page
+
+    // Update the gallery to show the correct images for the current page
+    function updateGallery() {
+        const startIndex = currentPage * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+
+        // Get all the gallery items and hide them
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.style.display = 'none';
+        });
+
+        const numPages = Math.ceil(galleryItems.length / itemsPerPage);
+
+        // Loop through the items for the current page and show them
+        for (let i = startIndex; i < endIndex && i < galleryItems.length; i++) {
+            galleryItems[i].style.display = 'block';
+        }
+
+        // Disable the previous button if we're on the first page
+        const prevBtn = document.getElementById('prev-page');
+        if (currentPage === 0) {
+            prevBtn.disabled = true;
+        } else {
+            prevBtn.disabled = false;
+        }
+
+        // Disable the next button if we're on the last page
+        const nextBtn = document.getElementById('next-page');
+        if (currentPage === numPages - 1) {
+            nextBtn.disabled = true;
+        } else {
+            nextBtn.disabled = false;
+        }
+    }
+
+    // Call updateGallery to show the initial page
+    updateGallery();
+</script>
