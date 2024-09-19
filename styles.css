@@ -162,6 +162,11 @@
     }
 
 
+    .aboutme
+    {
+        margin: 0 10% 0 10%;
+        padding: 0 1% 1% 1%;
+    }
 
     .year-title {
         width: 90%;
@@ -170,7 +175,7 @@
         font-size: 24px;
         padding: 10px 0;
         cursor: pointer;
-        background-color: #ffccff;
+        background-color: rgb(50, 0, 100, 0.6);
         margin-bottom: 5px;
         border-radius: 5px;
         font-family: 'DarumadropOne-Regular';
