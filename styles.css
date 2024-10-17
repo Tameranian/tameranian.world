@@ -35,6 +35,11 @@
 
     /* Global Styles */
     body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Ensure body takes full viewport height */
         background: #ffccff url('images/TempBackground.png') repeat center center fixed;
         color: white;
         font: .5vw Arial, sans-serif;
