@@ -1,4 +1,4 @@
-    @keyframes floating {
+@keyframes floating {
         from {
             transform: rotate(2deg);
         }
